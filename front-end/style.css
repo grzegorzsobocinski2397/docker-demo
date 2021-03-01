@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'ABB Font Medium';
+  font-style: normal;
+  font-weight: normal;
+
+  src: url('./assets/fonts/ABBvoice_W_Lt.eot'),
+  url('./assets/fonts/ABBvoice_W_Lt.woff'),
+  url('./assets/fonts/ABBvoice_W_Lt.woff2');
+}
+
+* {
+  font-family: 'ABB Font Medium';
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.title {
+  margin-top: 5%;
+  font-size: 64px;
+}
+
+.heading {
+  font-size: 30px;
+}
+
+.message {
+  font-size: 36px;
+}
+
+.user-image {
+  width: 25%;
+  height: auto;
+}
