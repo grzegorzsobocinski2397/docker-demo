@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  front-end:
+    build:
+      # Use Dockerfile from front-end to build this service.
+      context: ./front-end
+    ports:
+      - 4000:80
+    volumes:
+      # Share ./data folder with assets directory of our application.
+      - ./data:/usr/share/nginx/html/assets/user-images
