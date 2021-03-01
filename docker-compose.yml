@@ -10,3 +10,20 @@ services:
     volumes:
       # Share ./data folder with assets directory of our application.
       - ./data:/usr/share/nginx/html/assets/user-images
+    networks:
+      # Common virtual network to prevent exceptions from CORS (Cross-Origin Resource Sharing)
+      - v-net
+     
+  back-end:
+    build:
+      context: ./back-end
+    ports:
+      - 7071:5000
+    environment:
+      - MESSAGE=Message from the API
+    networks:
+      - v-net
+      
+networks:
+  v-net:
+    driver: bridge
